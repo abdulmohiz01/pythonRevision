@@ -108,3 +108,113 @@ import random
 # print(len(fruits)) #length
 
 
+# numbers= [1,2,3,4,5,6,7,8,9]
+
+# for number in numbers:
+#     print(number)
+# for number in range(2,101,2):
+#     print(number)
+
+# letters= ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# numbers= ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+# symbols= ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=', '+', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/']
+
+
+# print("Welcome to the password generator.")
+# nr_letters = int(input("How many letters would you like in your password?\n"))
+# nr_symbols = int(input("How many symbols would you like?\n"))
+# nr_numbers = int(input("How many numbers would you like?\n"))
+# password= ""
+# for char in range(1, nr_letters + 1):
+#     password += random.choice(letters)    
+# for char in range(1, nr_symbols + 1):
+#     password += random.choice(symbols)
+# for char in range(1, nr_numbers + 1):
+#     password += random.choice(numbers)
+# print(password)
+
+
+# def add(n1, n2):
+#     return n1 + n2
+
+
+# while True:
+#     try:
+#         num1 = float(input("Enter first number: "))
+#         num2 = float(input("Enter second number: "))
+#         result = add(num1, num2)
+#         print(f"The sum is: {result}")
+#         break
+#     except ValueError:
+#         print("Invalid input. Please enter numbers only.")
+
+
+
+# words= ["hello", "world", "python", "programming", "language", "code", "computer", "science", "artificial", "intelligence"]
+# random_word = random.choice(words)
+# blank_word = ['_' for _ in random_word]
+# tries=5
+# while True:
+#     guess = input(f"Guess a letter in the word {blank_word}: ").lower()
+#     if len(guess) != 1 or not guess.isalpha():
+#         print("Please enter a single letter.")
+#         continue
+#     if guess in random_word:
+#         blank_word = "".join([random_word[i] if random_word[i] == guess else blank_word[i] for i in range(len(random_word))])
+#         print(f"Good guess! The word now looks like this: {blank_word}")
+#     else:
+#         print("Sorry, that letter is not in the word.")
+#     if "_" not in blank_word:
+#         print(f"Congratulations! You've guessed the word: {random_word}")
+#         break
+# print("Game Over")
+# print("The word was:", random_word)
+
+
+# while True:
+#     guess = input("Guess a letter in the word: ").lower()
+#     if len(guess) != 1 or not guess.isalpha():
+#         print("Please enter a single letter.")
+#         continue
+#     if guess in random_word:
+#         for i, letter in enumerate(random_word):
+#             if letter == guess:
+#                 blank_word[i] = guess
+#         print(f"You guessed a correct letter. Here's how it looks: {' '.join(blank_word)}")
+#     else:
+#         tries-=1
+#         print("You entered a wrong letter. No of tries left: ", tries )
+#         if tries == 0:
+#             print("Game Over")
+#             print("The word was:", random_word)
+#             break
+#     if "_" not in blank_word:
+#         print(f"Congratulations! You've guessed the word: {random_word}")
+#         break
+
+# def noOfCans(height, width):
+#     area = height * width
+#     canArea = 5
+#     noOfCans = area / canArea
+#     return noOfCans
+
+# height = int(input("Enter the height of the wall: "))
+# width = int(input("Enter the width of the wall: "))
+# noOfCans = noOfCans(height, width)
+# print(f"You will need {noOfCans} cans of paint to cover the wall.")
+
+
+#Caesar Cipher
+# alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ']
+# text=input("Type your message:\n").lower()
+# shift= int(input("Type the shift number:\n"))
+
+# def encrypt(text, shift):
+#     cipherText=""
+#     for letter in text:
+#         position = alphabet.index(letter)
+#         newPosition = position + shift
+#         newLetter = alphabet[newPosition]
+#         cipherText+= newLetter
+#     print(f"The encoded text is: {cipherText}")
+# encrypt(text, shift)
