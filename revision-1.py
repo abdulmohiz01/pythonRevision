@@ -218,3 +218,112 @@ import random
 #         cipherText+= newLetter
 #     print(f"The encoded text is: {cipherText}")
 # encrypt(text, shift)
+
+#Dictionaries
+# dictionary = {
+#     "a": "apple",
+#     "b": "banana",
+#     "c": "cherry",
+#     "d": "date",
+#     "e": "elderberry",
+#     "f": "fig",
+#     "g": "grape",
+#     "h": "honeydew",
+#     "i": "kiwi",
+#     "j": "jackfruit",
+#     "k": "kiwi",
+#     "l": "lemon",
+#     "m": "mango",
+#     "n": "nectarine",
+#     "o": "orange",
+#     "p": "papaya",
+#     1: "one",
+# }
+# print(dictionary[1]) 
+# dictionary[1] = "two"
+# dictionary[2] = "two"
+# print(dictionary[1])
+# print(dictionary[2])
+
+
+# for thing in dictionary:
+#     print(thing)
+#     print(dictionary[thing])
+
+
+# studentScores= {
+#     "Harry": 81,
+#     "Ron": 78,
+#     "Hermione": 99,
+#     "Draco": 74,
+#     "Neville": 62
+# }
+# studentGrades = {}
+# for student in studentScores:
+#     score = studentScores[student]
+#     if score >= 91:
+#         studentGrades[student] = "Outstanding"
+#     elif score >= 81:
+#         studentGrades[student] = "Exceeds Expectations"
+#     elif score >= 71:
+#         studentGrades[student] = "Acceptable"
+#     else:
+#         studentGrades[student] = "Fail"
+
+
+# print(studentGrades)
+
+
+#Nesting
+#Dictionaries inside a list
+# courses=[
+#     {
+#         "semester": "1",
+#         "programmingLanguage": "c",
+#     },
+#     {
+#         "semester": "2",
+#         "programmingLanguage": "java",
+#     },
+#     {
+#         "semester": "3",
+#         "programmingLanguage": "java",
+#     },
+#     {
+#         "semester": "4",
+#         "programmingLanguage": "c++",
+#     },
+#     {
+#         "semester": "5",
+#         "programmingLanguage": "javascript",
+#     },
+#     {
+#         "semester": "6",
+#         "programmingLanguage": "python",
+#     },
+#     {
+#         "semester": "7",
+#         "programmingLanguage": "c sharp",
+#     }         
+# ]
+
+# print(courses[0])
+print("Welcome to the sceret auction program.")
+bids={}
+while True:
+    name = input("What is your name? ")
+    price = int(input("What is your bid? $"))
+    bids[name] = price
+    more_bids = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
+    if more_bids == "no":
+        break
+    
+def find_highest_bidder(bidding_record):
+    highest_bid=0
+    for bidder in bidding_record:
+        bid_amount = bidding_record[bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}.")
+find_highest_bidder(bids)
