@@ -308,22 +308,66 @@ import random
 # ]
 
 # print(courses[0])
-print("Welcome to the sceret auction program.")
-bids={}
-while True:
-    name = input("What is your name? ")
-    price = int(input("What is your bid? $"))
-    bids[name] = price
-    more_bids = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
-    if more_bids == "no":
-        break
+# print("Welcome to the sceret auction program.")
+# bids={}
+# while True:
+#     name = input("What is your name? ")
+#     price = int(input("What is your bid? $"))
+#     bids[name] = price
+#     more_bids = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
+#     if more_bids == "no":
+#         break
     
-def find_highest_bidder(bidding_record):
-    highest_bid=0
-    for bidder in bidding_record:
-        bid_amount = bidding_record[bidder]
-        if bid_amount > highest_bid:
-            highest_bid = bid_amount
-            winner = bidder
-    print(f"The winner is {winner} with a bid of ${highest_bid}.")
-find_highest_bidder(bids)
+# def find_highest_bidder(bidding_record):
+#     highest_bid=0
+#     for bidder in bidding_record:
+#         bid_amount = bidding_record[bidder]
+#         if bid_amount > highest_bid:
+#             highest_bid = bid_amount
+#             winner = bidder
+#     print(f"The winner is {winner} with a bid of ${highest_bid}.")
+# find_highest_bidder(bids)
+
+
+# #BlackJack
+# from random import shuffle
+# cards=[11,2,3,4,5,6,7,8,9,10,10,10,10]
+# def deal_card():
+#     return cards[random.randint(0, 12)]
+# def calculate_score(hand):
+
+
+
+#Scope
+# enemies=1
+# def increase_enemies():
+#     enemies=2 #inorder to access the global variable, we need to use the global keyword 
+    
+#     print(f"Enemies inside function: {enemies}")
+# increase_enemies()
+# print(f"Enemies outside function: {enemies}")
+    
+# print("Welcome to the Number Guessing Game!")
+# print("I'm thinking of a number between 1 and 100.")
+# difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
+# number = random.randint(0,100)
+# print(f"Your number is {number}")
+# attempts = 0
+# if difficulty == "easy":
+#     attempts = 10
+# else:
+#     attempts = 5
+# while attempts !=0:
+#     print(f"You have {attempts} attempts remaining to guess the number.")
+#     guess = int(input("Make a guess: "))
+#     if guess == number:
+#         print(f"You got it! The answer was {number}.")
+#         break
+#     elif guess < number:
+#         attempts -= 1
+#         print("Too low. Attempts left: ", attempts)
+#     elif guess > number:
+#         attempts -= 1
+#         print("Too high. Attempts left: ", attempts)
+#     if attempts == 0:
+#         print(f"You lost. The number was {number}.")
