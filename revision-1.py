@@ -329,12 +329,6 @@ import random
 # find_highest_bidder(bids)
 
 
-# #BlackJack
-# from random import shuffle
-# cards=[11,2,3,4,5,6,7,8,9,10,10,10,10]
-# def deal_card():
-#     return cards[random.randint(0, 12)]
-# def calculate_score(hand):
 
 
 
@@ -371,3 +365,49 @@ import random
 #         print("Too high. Attempts left: ", attempts)
 #     if attempts == 0:
 #         print(f"You lost. The number was {number}.")
+
+# data=[
+#     {
+#         'name': 'Ronaldo',
+#         'follower_count': 100,
+#         'description': 'Footballer',
+#         'country': 'Portugal'
+#     },
+#     {
+#         'name': 'Messi',
+#         'follower_count': 200,
+#         'description': 'Footballer',
+#         'country': 'Argentina'
+#     },
+#     {
+#         'name': 'Virat',
+#         'follower_count': 300,
+#         'description': 'Cricketer',
+#         'country': 'India'
+#     },
+#     {
+#         'name': 'Babar',
+#         'follower_count': 400,
+#         'description': 'Cricketer',
+#         'country': 'Pakistan'
+#     }
+# ]
+# import random
+
+ 
+# person1= random.choice(data)
+# person2= random.choice(data)
+# print(f"Compare A: {person1['name']}, a {person1['description']}, from {person1['country']} with : {person2['name']}, a {person2['description']}, from {person2['country']}.")
+# option= input("Who has more followers? Type 'A' or 'B': ").lower()
+# if option == "a":
+#     if person1['follower_count'] > person2['follower_count']:
+#         print("You are right")
+#     else:
+#         print("You are wrong")
+# elif option == "b":
+#     if person2['follower_count'] > person1['follower_count']:
+#         print("You are right")
+#     else:
+#         print("You are wrong")
+# else:
+#     print("Invalid option.")
