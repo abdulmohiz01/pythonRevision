@@ -411,3 +411,27 @@ import random
 #         print("You are wrong")
 # else:
 #     print("Invalid option.")
+
+
+
+#OOP
+
+# class Waiter:
+#     isHoldingPlate= False
+#     tablesResponsible= [4,5,6]
+
+#     def take_order(table, order):
+
+#     def take_payment(amount):
+
+from prettytable import PrettyTable
+
+table = PrettyTable()
+table.add_column("Pokemon Name", ["Pikachu", "Charmander", "Squirtle"])
+table.add_column("Type", ["Electric", "Fire", "Water"])
+# table.field_names = ["Pkoemon Name", "Type"]
+# table.add_row(["Pikachu", "Electric"])
+# table.add_row(["Charmander", "Fire"])
+# table.add_row(["Squirtle", "Water"])
+
+print(table)
